@@ -11,10 +11,11 @@
     <link rel="stylesheet" href="bower_components/angular-carousel/dist/angular-carousel.css" />
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <!-- endbower -->
-    <link rel="stylesheet" href="styles/module/carousel.css">
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/module/carousel.css">
+    <link rel="stylesheet" href="styles/module/links.css">
     <!-- endbuild -->
   </head>
   <body ng-app="tommysiteApp"
@@ -38,7 +39,7 @@
             ng-click="g.goHome()">tomi</h3>
       </div>
 
-      <div ng-view></div>
+      <div ng-view class="page"></div>
 
       <div class="footer">
         <p>
