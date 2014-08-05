@@ -45,7 +45,7 @@ module.exports = function (grunt) {
         tasks: ['newer:jshint:test', 'karma']
       },
       compass: {
-        files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass,css}'],
+        files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
         tasks: ['compass:server', 'autoprefixer']
       },
       gruntfile: {
@@ -148,13 +148,13 @@ module.exports = function (grunt) {
     // Add vendor prefixed styles
     autoprefixer: {
       options: {
-        browsers: ['last 2 versions']
+        browsers: ['last 1 version']
       },
       dist: {
         files: [{
           expand: true,
           cwd: '.tmp/styles/',
-          src: '{,*/,**}*.css',
+          src: '{,*/}*.css',
           dest: '.tmp/styles/'
         }]
       }
