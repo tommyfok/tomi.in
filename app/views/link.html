@@ -1,0 +1,22 @@
+<div class="Search">
+    搜索：<input ng-model="lkCtrl.filterKey">
+</div>
+<div>
+    <ul class="Links">
+        <li class="Links-item"
+            ng-repeat="item in lkCtrl.links | filter:lkCtrl.filterKey | limitTo:lkCtrl.showCount">
+          <a ng-bind="item.title"
+             ng-href="{{ item.url }}"
+             title="{{ item.desc }}"
+             target="_blank"></a>
+          <span class="Links-itemDesc"
+                ng-bind="item.desc"></span>
+        </li>
+        <li class="Links-item"
+            ng-if="lkCtrl.showCount!==99999"
+            ng-click="lkCtrl.showCount=99999">点击查看全部</li>
+        <li class="Links-item"
+            ng-if="lkCtrl.showCount>=99999"
+            ng-click="lkCtrl.showCount=10">仅显示10条</li>
+    </ul>
+</div>
