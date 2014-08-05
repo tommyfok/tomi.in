@@ -1,20 +1,17 @@
 <div class="Search">
     搜索：<input ng-model="lkCtrl.filterKey">
-    <button ng-if="lkCtrl.showCount!==99999"
-        ng-click="lkCtrl.showCount=99999">点击查看全部</button>
-    <button ng-if="lkCtrl.showCount>=99999"
-        ng-click="lkCtrl.showCount=10">仅显示10条</button>
 </div>
-<div>
-    <ul class="Links">
-        <li class="Links-item"
-            ng-repeat="item in lkCtrl.links | filter: lkCtrl.filterKey | limitTo:lkCtrl.showCount">
-          <a ng-bind="item.title"
-             ng-href="{{ item.url }}"
-             title="{{ item.desc }}"
-             target="_blank"></a>
-          <span class="Links-itemDesc"
-                ng-bind="item.desc"></span>
-        </li>
-    </ul>
+<div class="Links">
+    <!-- Note that inside the repeat item there should be no same tag in it -->
+    <!-- or it may cause some mistake. -->
+    <a class="Links-item"
+       ng-repeat="item in lkCtrl.links | filter: lkCtrl.filterKey"
+       ng-href="{{ item.url }}"
+       title="{{ item.desc }}"
+       target="_blank">
+      <span class="Links-itemTitle"
+            ng-bind="item.title"></span>
+      <span class="Links-itemDesc"
+            ng-bind="item.desc"></span>
+    </a>
 </div>
