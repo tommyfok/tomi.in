@@ -11,5 +11,5 @@ angular.module('tommysiteApp')
   .controller('LinkCtrl', function ($scope, links, $location) {
     var self = this;
     self.links = links;
-    self.showCount = 3;
+    self.showCount = 10;
   });
