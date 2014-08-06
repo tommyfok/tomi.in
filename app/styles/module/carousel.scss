@@ -1,11 +1,23 @@
 .Carousel {
+  box-shadow: 0 0 4px rgba(0,0,0,0.3) inset;
   background: #998998;
-  color: #ffa;
+  border-radius: 5px;
+  color: rgba(255,255,255,0.3);
+  padding: 250px 10px 10px;
+  line-height: 40px;
+  font-size: 30px;
   height: 300px;
   transition: all 0.3s ease-out;
   transform: translateY(-10px);
+  text-align: right;
+
+  h2 {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .Carousel:hover {
   transform: translateY(0);
+  color: #fff;
 }
